@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.clear {
+    clear: left;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: fixed;
+    top: 0;
+    padding: 0 10px;
+    z-index: 3;
+
+    .header-left {
+        .homeBtn {
+            height: 50px;
+            margin: 10px;
+            opacity: 0.8;
+            float: left;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .headerMenu {
+            p {
+                font-size: 25px;
+                color: black;
+                display: block;
+                float: left;
+                padding: 0 40%;
+                opacity: 0.5;
+            }
+        }
+    }
+
+}
+
+footer {
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    border-top: dashed 1px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
+
+    p {
+        color: rgba(0, 0, 0, 0.3);
+        font-size: 2px;
+        margin: 20px;
+    }
+}
+
+.courseWrapper {
+    width: 80%;
+    margin: 200px 25%;
+
+    .ff {
+        width: 320px;
+        opacity: 0.8;
+        margin: 5px;
+        float: left;
+        position: relative;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        p {
+            position: absolute;
+            text-align: center;
+            left: 30%;
+            top: 35%;
+            color: white;
+            z-index: 2;
+        }
+
+        img {
+            border-radius: 10px;
+            width: 320px;
+        }
+    }
+}
+
+.maegaki {
+    margin: 200px 25%;
+}
+
+@mixin block {
+    position: fixed;
+    top: 100px;
+    height: 100px;
+    width: 30px;
+    padding-top: 5px;
+    text-align: center;
+    opacity: 0.4;
+
+    .string {
+        width: 10px;
+        text-align: center;
+        border-right: solid 1px black;
+    }
+
+    .box {
+        width: 20px;
+        height: 15px;
+        border: solid 1px black;
+    }
+}
+
+#pulley {
+
+    .percent_block {
+        @include block;
+        right: 50px;
+
+        .string {
+            height: 0%;
+        }
+
+        .percent_text {
+            font-size: 10px;
+            margin-bottom: 10px;
+
+            span {
+                font-size: 10px;
+                font-family: 'Homenaje', sans-serif;
+            }
+        }
+    }
+
+    .opposite_block {
+        @include block;
+        right: 10px;
+
+        .string {
+            height: 100%;
+        }
+    }
+}

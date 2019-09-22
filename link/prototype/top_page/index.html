@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="index.css">
+		<title>index.html</title>
+
+		<!--Mathjax.js-->
+		<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
+		<script type="text/x-mathjax-config">MathJax.Hub.Config({displayAlign: "left", displayIndent: "2em"	});
+		</script>
+		<!--p5.js-->
+		<script src="libraries/p5.js"></script>
+		<script src="libraries/p5.dom.js"></script>
+		<!--matter.js-->
+		<script src="libraries/matter.js"></script>
+	</head>
+
+	<body>
+
+		<div id="loading"></div>
+		<div id="contents" class="clearfix">
+			<p class="head1">第1章 力学</p>
+			<p class="head2">8</p>
+			<p class="head3">1.7 &nbsp; 束縛運動</p>
+
+			<div class="question clearfix">
+				<div class="q_171">
+					<p>&emsp;&emsp;質点が特定の線上または面上に限定されて運動する場合を束縛運動という．束縛がなくなるのは，面からの垂直抗力や，束縛している紐の張力がなくなるときである．</p>
+					<!-- main text -->
+					<p class="q_171_maintext">
+						<a href="q_171/index.html" >
+							<span class="bolder">問題1.7.1</span>
+						</a>
+						　大きさが無視できる質量\(m\)の小球が速度\(V_0\)で水平面上を直進し，その後，半径\(R\)の半円筒に沿って上昇する運動について以下の問に答えよ．ただし，重力加速度を\(g\)，小球と水平面および半円筒面の間に摩擦はないものとする．(豊橋技科大)
+					</p>
+					<!-- sub text -->
+					<div class ="q_171_subtext">
+						<ol class="list_parentheses list_set">
+							<li>
+								小球が半円筒に沿って上昇し，点\(B\)に到達するために必要な最小の速度\(V_0\)を求めよ．
+							</li>
+							<li>
+								図に示すように，小球が点\(P\)で半円筒面から離れる場合，その後は放物運動を行うが，点\(P\)における小球の速度が\( V_p=\sqrt{gR/2} \)であることを示せ．
+							</li>
+							<li>
+								 (2)の一連の運動を行うために必要な速度\(V_0\)が，\( V_0=\sqrt{7gR/2} \)であることを示せ．
+							</li>
+							<li>
+								 (2)において，点\(P\)で半円筒面から離れた小球が点\(A\)に着地することを示せ．
+							</li>
+
+						</ol>
+					</div>
+					<!-- img  -->
+					<div id="q_171_parent">
+						<div id="q_171_img"></div>
+						<p id="R">\(R\)</p>
+						<p id="O">\(O\)</p>
+						<p id="A">\(A\)</p>
+						<p id="B">\(B\)</p>
+						<p id="C">\(C\)</p>
+						<p id="D">\(D\)</p>
+						<p id="V0">\(V_0\)</p>
+						<p id="m1">\(m\)</p>
+						<div id="P">\(P\)</div>
+					</div>
+				</div>
+				<div class="q_172">
+					<!-- main text -->
+					<p class="q_172_maintext">
+							<a href="q_172/index.html" >
+								<span class="bolder">問題1.7.2</span>
+							</a>
+							　質量の無視できる長さ\(L\)のひもに質量\(M\)のおもりが取り付けられた振り子が，鉛直面内で揺れる．ひもはその支点の真下\(d\)の距離に位置する細い杭に当たる(図)．おもりの大きさ(直径)は，ひもの長さに比べて無視してよい．以下の問に答えよ．(福井大)
+					</p>
+					<!-- sub text -->
+					<div class ="q_172_subtext">
+						<ol class="list_parentheses list_set">
+							<li>
+								振り子を杭より低い位置から放すとき，振り子は杭に当たった後もとの高さに戻ることを説明せよ．
+							</li>
+							<li>
+								振り子を水平位置( \( \theta = 90^\circ \) )から放すとき，振り子が杭を中心とする完全な円を描くためには，\(d\)の最小値は\(3L/5\)でなければならないことを示せ．
+							</li>
+						</ol>
+					</div>
+					<!-- img  -->
+					<div id="q_172_parent">
+						<div id="q_172_img"></div>
+						<p id="d">\(d\)</p>
+						<p id="theta">\(\theta\)</p>
+						<p id="m">\(m\)</p>
+						<p id="L">\(L\)</p>
+						<p id="shiten">支点</p>
+						<p id="kui">杭</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script>
+			document.getElementById("contents").style.display = "none";
+			document.getElementById("P").style.display = "none";
+			function f()
+			{
+				document.getElementById("P").style.display = "block";
+			}
+		</script>
+		<script src="myscript.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,264 @@
+/*　文中で太字にしたい部分に与えるclass*/
+.bolder
+{
+	font-family	: 'Yu Gothic';
+	font-weight	: bold;
+}
+
+#home
+{
+	width 		: 5%;
+	margin-left	: 10px;
+}
+
+body
+{
+	width	: 800px;
+}
+
+#contents
+{
+	/* background-color: darkgray; */
+	font-family		: 'Yu Mincho';
+	font-weight		: bold;
+	margin			: 30px 30px 30px 30px;
+	padding			: 30px 30px 30px 30px;
+}
+
+.question
+{
+	font-size			: 14px;
+	/* background-color	: silver; */
+	width				: 650px;
+}
+
+
+
+
+
+/*問題1.7.1____________________________________________________*/
+
+/*問題文(大問)*/
+.q_171_maintext
+{
+	margin-bottom	: 2em;
+	text-indent		: 1em;
+}
+/*問題文(小問)*/
+.q_171_subtext
+{
+	/* background-color	: lavender; */
+	float				: left;
+}
+/*問図*/
+#q_171_parent
+{
+	position		: relative;
+	margin-left		: 100px;
+	margin-bottom	: 100px; 
+}
+#R
+{
+	position: absolute;
+	top : 85px;
+	left: 213px;
+}
+#O
+{
+	position: absolute;
+	top : 140px;
+	left: 205px;
+}
+#A
+{
+	position: absolute;
+	top : 230px;
+	left: 190px;
+}
+#B
+{
+	position: absolute;
+	top : 125px;
+	left: 90px;
+}
+#C
+{
+	position: absolute;
+	top : 30px;
+	left: 190px;
+}
+#D
+{
+	position: absolute;
+	top : 230px;
+	left: 350px;
+}
+#V0
+{
+	position: absolute;
+	top : 140px;
+	left: 300px;
+}
+#m
+{
+	position: absolute;
+	top : 205px;
+	left: 380px;
+}
+#P
+{
+	position: absolute;
+	top : 90px;
+	left: 110px;
+}
+
+/*(2)*/
+#sub2_text
+{
+	float	: left;
+}
+#sub2_img_parent
+{
+	width :150px;
+	position: relative;
+	float	: left;
+}
+#sub2_img
+{
+	width	: 100%;
+	float	: left;
+}
+#mg
+{
+	position	: absolute;
+	top			: 78px;
+	left		: 30px;
+}
+#N
+{
+	color: red;
+	position: absolute;
+	top : 40px;
+	left: 70px;
+}
+#theta
+{
+	position: absolute;
+	top : 78px;
+	left: 80px;
+}
+
+
+#sub4_img_parent
+{
+	width :300px;
+	position: relative;
+	clear	: both;
+}
+#sub4_img
+{
+	width	: 100%;
+}
+#x
+{
+	position	: absolute;
+	top			: 165px;
+	left		: 275px;
+}
+#y
+{
+	position: absolute;
+	top : -12px;
+	left: 40px;
+}
+#VP
+{
+	position: absolute;
+	top : 5px;
+	left: 70px;
+}
+#A_point
+{
+	position: absolute;
+	top : 180px;
+	left: 100px;
+}
+#deg30
+{
+	position: absolute;
+	top : 85px;
+	left: 65px;
+}
+#deg60
+{
+	position: absolute;
+	top : 40px;
+	left: 60px;
+}
+/* floatのおまじない */
+.clearfix:after
+{
+	content		: " ";
+	display		: block;
+	height		: 0;
+	clear		: both;
+	visibility: : hidden;
+}
+.clearfix {display: inline-table;}
+
+#loading
+{
+	position	: absolute;
+	top 		: 0px;
+	left		: 0px;
+}
+
+
+
+
+/*ボックス全体*/
+.accbox {
+    margin: 2em 0;
+    padding: 0;
+    /* max-width: 600px;/*最大幅*/
+}
+
+/*ラベル*/
+.accbox label {
+    display: block;
+    margin: 1.5px 0;
+    padding : 11px 12px;
+    font-weight: bold;
+    cursor :pointer;
+    transition: all 0.5s;
+
+    padding-left :3em; /*1em（1文字）分、右に動かす*/
+	text-indent  : -2em;
+}
+
+/*ラベルホバー時*/
+.accbox label:hover {
+    background :#85baef;
+}
+
+/*チェックは隠す*/
+.accbox input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.accbox .accshow {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.cssacc:checked + .accshow {
+    height: auto;
+    padding: 5px;
+    background: #eaeaea;
+    opacity: 1;
+}

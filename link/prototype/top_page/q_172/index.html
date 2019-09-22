@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="index.css">
+		<title>index.html</title>
+
+		<!--Mathjax.js-->
+		<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
+		<script type="text/x-mathjax-config">MathJax.Hub.Config({displayAlign: "left", displayIndent: "2em"	});
+		</script>
+		<!--p5.js-->
+		<script src="libraries/p5.js"></script>
+		<script src="libraries/p5.dom.js"></script>
+		<!--matter.js-->
+		<script src="libraries/matter.js"></script>
+	</head>
+
+	<body>
+
+		<div id="loading"></div>
+		<div id="contents" class="clearfix">
+			<a href="../index.html">
+			<img id="home" src="home.png">
+			</a>
+			<div class="question clearfix">
+				<div class="q_172">
+					<!-- img  -->
+					<div id="q_172_parent">
+						<div id="q_172_img"></div>
+						<p id="d">\(d\)</p>
+						<p id="theta">\(\theta\)</p>
+						<p id="m">\(m\)</p>
+						<p id="L">\(L\)</p>
+						<p id="shiten">支点</p>
+						<p id="kui">杭</p>
+
+						<p id="theta_eq">\( \theta = \frac{\hspace{2em}}{360} \pi \)</p>
+						<p id="L_ok">\(L:\)</p>
+						<p id="d_eq">\(d= \frac{\hspace{2em}}{5} L \)</p>
+					</div>
+					<!-- main text -->
+					<p class="q_172_maintext">
+						<span class="bolder">問題1.7.2</span>　質量の無視できる長さ\(L\)のひもに質量\(M\)のおもりが取り付けられた振り子が，鉛直面内で揺れる．ひもはその支点の真下\(d\)の距離に位置する細い杭に当たる(図)．おもりの大きさ(直径)は，ひもの長さに比べて無視してよい．以下の問に答えよ．(福井大)
+					</p>
+					<!-- sub text -->
+					<div class ="q_172_subtext">
+						<div class="accbox">
+							<!--ラベル1-->
+						    <label for="label1">
+						    	(1) 振り子を杭より低い位置から放すとき，振り子は杭に当たった後もとの高さに戻ることを説明せよ．
+						    </label>
+						    <input type="checkbox" id="label1" class="cssacc" />
+						    <div class="accshow">
+							    <p>
+									糸がたるまない間おもりに働く力は，保存力である重力と，進行方向に対して常に垂直な張力のみである．これらのことから，おもりが持つ力学的エネルギーは保存するので，おもりは元の高さまで戻る．
+								</p>
+						    </div>
+							<!--ラベル2-->
+						    <label for="label2">
+						    	(2) 振り子を水平位置( \( \theta = 90^\circ \) )から放すとき，振り子が杭を中心とする完全な円を描くためには，\(d\)の最小値は\(3L/5\)でなければならないことを示せ．
+						    </label>
+						    <input type="checkbox" id="label2" class="cssacc" />
+						    <div class="accshow">
+						    	<p id="sub2_text">
+									杭に到達してからの運動について，動径方向の運動方程式を立てると張力は
+									\begin{split}
+										-\frac{mv^2}{L-d}	&= -T + mg\cos{\alpha} \\
+										T					&= \frac{mv^2}{L-d} - mg\cos{\alpha} \hspace{4em}...(eq1) \\
+									\end{split}
+									と表すことができる．<br><br>
+
+									また，おもりを離した時刻と\(\alpha\)だけ回った時刻で力学的エネルギー保存則を考える． <br>
+						    		おもりを離した点を位置エネルギーの基準とすると
+									\begin{split}
+										0		&= \frac{1}{2}mv^2 - mg\bigl( d + (L-d)\cos{\alpha} \bigr) \\
+										mv^2	&= 2mg\bigl( d + (L-d)\cos{\alpha} \bigr) \hspace{4em}...(eq2) \\
+									\end{split}
+									振り子が円を描くためには，おもりが杭の真上に到達した時点でたるんでいない，すなわち<br>
+								 	\(\alpha=\pi\)&emsp;のとき&emsp;\( T \geq 0 \)&emsp;でなければならない．<br>
+								 	\(\cos{\pi}=-1\)となることに注意して\((eq1)\)に\((eq2)\)を代入すると
+								 	\begin{split}
+										T	&= \frac{2mg(2d-L)}{L-d} - mg \\
+											&= mg\bigl( \frac{4d-2L}{L-d} - 1 \bigr) \\
+											&= mg\bigl( \frac{5d-3L}{L-d} ) \hspace{1em} \geq 0 \\
+									\end{split}
+									\begin{split}
+										\therefore 5d-3L	&\geq 0 \\
+										d					&\geq \frac{3}{5}L \\
+									\end{split}
+						    	</p>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			document.getElementById("contents").style.display = "none";
+		</script>
+		<script src="myscript.js"></script>
+
+	</body>
+
+</html>

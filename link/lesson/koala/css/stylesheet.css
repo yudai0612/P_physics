@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+.clear {
+  clear: left; }
+
+header {
+  height: 70px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: fixed;
+  top: 0;
+  padding: 0 10px;
+  z-index: 3; }
+  header .header-left .homeBtn {
+    height: 50px;
+    margin: 10px;
+    opacity: 0.8;
+    float: left; }
+    header .header-left .homeBtn:hover {
+      opacity: 1; }
+  header .header-left .headerMenu p {
+    font-size: 25px;
+    color: black;
+    display: block;
+    float: left;
+    padding: 0 40%;
+    opacity: 0.5; }
+
+footer {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  border-top: dashed 1px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3); }
+  footer p {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 2px;
+    margin: 20px; }
+
+.courseWrapper {
+  width: 80%;
+  margin: 200px 25%; }
+  .courseWrapper .ff {
+    width: 320px;
+    opacity: 0.8;
+    margin: 5px;
+    float: left;
+    position: relative; }
+    .courseWrapper .ff:hover {
+      opacity: 1; }
+    .courseWrapper .ff p {
+      position: absolute;
+      text-align: center;
+      left: 30%;
+      top: 35%;
+      color: white;
+      z-index: 2; }
+    .courseWrapper .ff img {
+      border-radius: 10px;
+      width: 320px; }
+
+/*# sourceMappingURL=stylesheet.css.map */

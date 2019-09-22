@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="index.css">
+		<title>index.html</title>
+
+		<!--Mathjax.js-->
+		<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
+		<script type="text/x-mathjax-config">MathJax.Hub.Config({displayAlign: "left", displayIndent: "2em"	});
+		</script>
+		<!--p5.js-->
+		<script src="libraries/p5.js"></script>
+		<script src="libraries/p5.dom.js"></script>
+		<!--matter.js-->
+		<script src="libraries/matter.js"></script>
+	</head>
+
+	<body>
+
+		<div id="loading"></div>
+		<div id="contents" class="clearfix">
+			<a href="../index.html">
+			<img id="home" src="home.png">
+			</a>
+			<div class="question clearfix">
+				<div class="q_171">
+					<!-- img  -->
+					<div id="q_171_parent">
+						<div id="q_171_img"></div>
+						<p id="R">\(R\)</p>
+						<p id="O">\(O\)</p>
+						<p id="A">\(A\)</p>
+						<p id="B">\(B\)</p>
+						<p id="C">\(C\)</p>
+						<p id="D">\(D\)</p>
+						<p id="V0">\(V_0 = \sqrt{ \frac{ \hspace{2em} }{2}gR }\)</p>
+						<p id="m">\(m\)</p>
+						<div id="P">\(P\)</div>
+
+					</div>
+					<!-- main text -->
+					<p class="q_171_maintext">
+							<span class="bolder">問題1.7.1</span>　大きさが無視できる質量\(m\)の小球が速度\(V_0\)で水平面上を直進し，その後，半径\(R\)の半円筒に沿って上昇する運動について以下の問に答えよ．ただし，重力加速度を\(g\)，小球と水平面および半円筒面の間に摩擦はないものとする．(豊橋技科大)
+					</p>
+					<!-- sub text -->
+					<div class ="q_171_subtext">
+						<div class="accbox">
+							<!--ラベル1-->
+						    <label for="label1">
+						    	(1) 小球が半円筒に沿って上昇し，点\(B\)に到達するために必要な最小の速度\(V_0\)を求めよ．
+						    </label>
+						    <input type="checkbox" id="label1" class="cssacc" />
+						    <div class="accshow">
+							    <p>
+									①点\(D\)で発射されてから\(A\)に到達するまでの質点の運動方程式は\( m\vec{a} = m\vec{g} + \vec{N} \)<br>
+									&emsp;であり垂直抗力が重力と釣り合っているため，合力は\( \vec{0} \)である．<br>
+									②半円筒面上を運動している間働いている力は保存力\(m\vec{g}\)と，進行方向に対して<br>
+									&emsp;常に垂直な力\(\vec{N}\)である．<br>
+									③面を離れてからは保存力である\(m\vec{g}\)のみが働く．<br>
+									これらの理由からこの問題では，着地する瞬間まで力学的エネルギー保存則が成り立つ．
+								</p>
+								<p>
+									力学的エネルギー保存則より，
+									\begin{split}
+										\frac{1}{2}mV_0^2	&= mgR \\
+										V_0^2				&= 2gR \\
+										V_0					&= \sqrt{2gR} \hspace{2em}( \because 0 < V_0 ) \\
+									\end{split}
+								</p>
+						    </div>
+							<!--ラベル2-->
+						    <label for="label2">
+						    	 (2) 図に示すように，小球が点\(P\)で半円筒面から離れる場合，その後は放物運動を行うが，点\(P\)における小球の速度が\( V_P=\sqrt{gR/2} \)であることを示せ．
+						    </label>
+						    <input type="checkbox" id="label2" class="cssacc" />
+						    <div class="accshow">
+						    	<p id="sub2_text">
+						    		動径方向の運動方程式を立てる．
+									\[ -\frac{mv^2}{R} = -N -mg\sin{\theta} \]
+									面から離れる瞬間( \(\theta = 30^\circ\) )に\( N=0 \)となるので，
+									\begin{split}
+										\frac{mV_P^2}{R}	&= mg\sin{30^\circ} \\
+										V_P^2				&= \frac{gR}{2} \\
+										V_P					&= \sqrt{ \frac{gR}{2} } \hspace{2em}( \because 0 < V_P ) \\
+									\end{split}
+						    	</p>
+						    	<div id="sub2_img_parent">
+									<img id="sub2_img" src="q171_2.png">
+									<p id="mg">\(mg\)</p>
+									<p id="N">\(N\)</p>
+									<p id="theta">\( \theta \)</p>
+								</div>
+						    </div>
+							<!--ラベル3-->
+						    <label for="label3">(3) (2)の一連の運動を行うために必要な速度\(V_0\)が，\( V_0=\sqrt{7gR/2} \)であることを示せ．</label>
+						    <input type="checkbox" id="label3" class="cssacc" />
+						    <div class="accshow">
+							    <p>
+							        力学的エネルギー保存則より，
+								 	\begin{split}
+										\frac{1}{2}mV_0^2	&= \frac{1}{2}mV_P^2　+ mgR(1+\sin{30^\circ}) \\
+										V_0^2				&= \frac{1}{2}gR +3gR \\
+										V_0					&= \sqrt{ \frac{7gR}{2} } \hspace{2em}( \because 0 < V_0 ) \\
+									\end{split}
+							    </p>
+						    </div>
+							<!--ラベル4-->
+						    <label for="label4">(4) (2)において，点\(P\)で半円筒面から離れた小球が点\(A\)に着地することを示せ．</label>
+						    <input type="checkbox" id="label4" class="cssacc" />
+						    <div class="accshow">
+						    	<div id="sub4_img_parent">
+									<img id="sub4_img" src="q171_4.png">
+									<p id="x">\(x\)</p>
+									<p id="y">\(y\)</p>
+									<p id="VP">\( V_P \)</p>
+									<p id="A_point">\( A( \frac{ \sqrt{3} }{2}R, 0 ) \)</p>
+									<p id="deg30">\( 30^\circ \)</p>
+									<p id="deg60">\( 60^\circ \)</p>
+								</div>
+							    <p>
+							    	上図のように軸をとると，点\(A\)の\(x\)座標は\( R\cos{30^\circ} = \frac{ \sqrt{3} }{2}R \)である．<br>
+									したがって，着地の瞬間に\(x\)座標がこの値になることを示せばよい．<br>
+									\(x\)，\(y\)についてそれぞれ運動方程式を立て，運動の解を求めると
+									<!--EOM about x-->
+									\begin{split}
+										m\ddot{x}	&= 0 \\
+										\dot{x}		&= V_P\cos{60^\circ} \\
+										x			&= \frac{1}{2}V_Pt \hspace{4em}...(eq1) \\
+									\end{split}
+									<!--EOM about y-->
+									\begin{split}
+										m\ddot{y}	&= -mg \\
+										\dot{y}		&= -gt + V_P\sin{60^\circ} \\
+													&= -gt + \frac{ \sqrt{3} }{2}V_P \\
+										y			&= -\frac{1}{2}gt^2 + \frac{ \sqrt{3} }{2}V_Pt +R(1+\sin{30^\circ}) \\
+													&= -\frac{1}{2}gt^2 + \frac{ \sqrt{3} }{2}V_Pt +\frac{3}{2}R \hspace{4em}...(eq2)\\
+									\end{split}
+									となる．地面に到達する( \(y=0\) )とき( \(eq2\) )より
+									\[ gt^2 - \sqrt{3}V_Pt -3R	= 0 \]
+									\begin{split}
+										t	&= \frac{ \sqrt{3}V_P \pm \sqrt{3V_P^2+4\cdot g \cdot 3R } }{2g} \\
+											&= \frac{\sqrt3}{2g}( V_P \pm \sqrt{ V_P^2 + 4gR } ) \\
+											&= \frac{\sqrt3}{g}( V_P + \sqrt{ V_P^2 + 4gR } ) \hspace{2em}( \because 0 < t ) \\
+									\end{split}
+									(2)で求めた\( V_P= \sqrt{ \frac{gR}{2} } \)を代入して
+									\begin{split}
+										t	&= \frac{\sqrt3}{2g} \Bigl( \sqrt{ \frac{gR}{2} } + \sqrt{ \frac{gR}{2} + 4gR } \hspace{1em}\Bigr) \\
+											&= \frac{1}{2}\sqrt{ \frac{3R}{2g} }( 1+\sqrt{9} ) \\
+											&= \sqrt{ \frac{6R}{g} } \\
+									\end{split}
+									この時刻における\(x\)座標は( \(eq2\) )より
+									\begin{split}
+										x( \sqrt{ \frac{6R}{g} } )	&= \frac{1}{2}V_P \sqrt{ \frac{6R}{g} } \\
+																	&= \frac{1}{2}\sqrt{ \frac{gR}{2} } \sqrt{ \frac{6R}{g} } \\
+																	&= \frac{ \sqrt{3} }{2}R \\
+									\end{split}
+									\( \therefore \) 小球は点\(A\)に着地
+							    </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			document.getElementById("contents").style.display = "none";
+			document.getElementById("P").style.display = "none";
+			function f()
+			{
+				document.getElementById("P").style.display = "block";
+			}
+		</script>
+		<script src="myscript.js"></script>
+
+	</body>
+
+</html>

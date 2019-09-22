@@ -1,0 +1,257 @@
+/*<ol>*/
+/*タグのナンバリングを括弧付けにする*/
+ol.list_parentheses
+{
+	padding:0 0 0 2em;
+	margin :0;
+}
+ol.list_parentheses li
+{
+	list-style-type    :none;
+	list-style-position:inside;
+	counter-increment  : cnt;
+}
+ol.list_parentheses li:before
+{
+	display: marker;
+	content: "(" counter(cnt) ") ";
+}
+/*二行目の回り込み防止*/
+ol
+{
+	list-style : none;
+	font-size  : 1em;
+	line-height: 1.3;
+}
+li
+{
+	margin-bottom: 2em;
+	padding-left :1em; /*1em（1文字）分、右に動かす*/
+	text-indent  : -2em; /*最初の行だけ1em（1文字）分、左に動かす*/
+}
+
+
+
+
+
+/* header*/
+.head1
+{
+	font-size	: 12px;
+	font-family	: 'Yu Mincho';
+	float		: left;
+	margin-right: 570px;
+}
+.head2
+{
+	font-size	: 12px;
+	font-family	: 'Yu Mincho';
+}
+.head3
+{
+	font-size	: 20px;
+	font-family	: 'Yu Mincho';
+}
+
+/*　文中で太字にしたい部分に与えるclass*/
+.bolder
+{
+	font-family	: 'Yu Gothic';
+	font-weight	: bold;
+}
+
+
+#loading
+{
+	position	: relative;
+	top 		: 0px;
+	left		: 0px;
+}
+
+
+
+body
+{
+	width	: 800px;
+}
+
+#contents
+{
+	/*background-color: darkgray;*/
+	font-family		: 'Yu Mincho';
+	font-weight		: bold;
+	margin			: 30px 30px 30px 30px;
+	padding			: 30px 30px 30px 30px;
+}
+
+.question
+{
+	font-size			: 14px;
+	/*background-color	: silver;*/
+	width				: 650px;
+}
+
+
+
+
+
+/*問題1.7.1____________________________________________________*/
+
+/*問題文(大問)*/
+.q_171_maintext
+{
+	margin-bottom	: 2em;
+	text-indent		: 1em;
+}
+/*問題文(小問)*/
+.q_171_subtext
+{
+	/*background-color	: lavender;*/
+	margin-right		: 2em;
+	width				: 320px;
+	float				: left;
+}
+/*問図*/
+#q_171_parent
+{
+	position	: relative;
+	float		: left;
+}
+#R
+{
+	position: absolute;
+	top : 120px;
+	left: 173px;
+}
+#O
+{
+	position: absolute;
+	top : 150px;
+	left: 155px;
+}
+#A
+{
+	position: absolute;
+	top : 230px;
+	left: 140px;
+}
+#B
+{
+	position: absolute;
+	top : 150px;
+	left: 60px;
+}
+#C
+{
+	position: absolute;
+	top : 70px;
+	left: 140px;
+}
+#D
+{
+	position: absolute;
+	top : 230px;
+	left: 230px;
+}
+#V0
+{
+	position: absolute;
+	top : 180px;
+	left: 230px;
+}
+#m1
+{
+	position: absolute;
+	top : 205px;
+	left: 250px;
+}
+#P
+{
+	position: absolute;
+	top : 120px;
+	left: 80px;
+}
+/* floatのおまじない */
+.clearfix:after
+{
+	content		: " ";
+	display		: block;
+	height		: 0;
+	clear		: both;
+	visibility: : hidden;
+}
+.clearfix {display: inline-table;}
+
+
+
+
+/*問題1.7.2____________________________________________________*/
+
+/*問題文(大問)*/
+.q_172_maintext
+{
+	clear			: both;
+	margin-bottom	: 2em;
+	text-indent		: 1em;
+}
+/*問題文(小問)*/
+.q_172_subtext
+{
+	/*background-color	: gray;*/
+	margin-right		: 2em;
+	width				: 400px;
+	float				: left;
+}
+/*問図*/
+#q_172_parent
+{
+	position	: relative;
+	float		: left;
+}
+#d
+{
+	position: absolute;
+	top : 40px;
+	left: 120px;
+}
+#theta
+{
+	position: absolute;
+	top : 50px;
+	left: 75px;
+}
+#m
+{
+	position: absolute;
+	top : 120px;
+	left: 10px;
+}
+#L
+{
+	position: absolute;
+	top : 50px;
+	left: 30px;
+}
+#shiten
+{
+	position: absolute;
+	top : 0px;
+	left: 70px;
+}
+#kui
+{
+	position: absolute;
+	top : 80px;
+	left: 70px;
+}
+
+/* floatのおまじない */
+.clearfix:after
+{
+	content		: " ";
+	display		: block;
+	height		: 0;
+	clear		: both;
+	visibility	:hidden;
+}
+.clearfix {display: inline-table;}
