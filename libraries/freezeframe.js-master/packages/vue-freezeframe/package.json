@@ -1,0 +1,48 @@
+{
+  "name": "vue-freezeframe",
+  "version": "4.0.0-alpha.7",
+  "main": "dist/freezeframe.umd.js",
+  "repository": "https://github.com/ctrl-freaks/freezeframe.js",
+  "license": "MIT",
+  "description": "React wrapper for freezeframe.js",
+  "author": "Nick Ford <nickforddesign@gmail.com>",
+  "homepage": "https://github.com/ctrl-freaks/freezeframe.js/packages/vue-freezeframe",
+  "keywords": [
+    "freezeframe",
+    "vue",
+    "gif"
+  ],
+  "bugs": {
+    "url": "https://github.com/ctrl-freaks/freezeframe.js/issues"
+  },
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name freezeframe src/lib.js && npm run build-demo",
+    "build-demo": "vue-cli-service build --dest demo && ./demo.sh",
+    "lint": "vue-cli-service lint --fix",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "peerDependencies": {
+    "freezeframe": "^4.0.0-alpha.6",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-plugin-unit-jest": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "core-js": "^2.6.5",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "freezeframe": "^4.0.0-alpha.7",
+    "sass": "^1.18.0",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

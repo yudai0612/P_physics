@@ -1,0 +1,63 @@
+{
+  "name": "freezeframe",
+  "version": "4.0.0-alpha.7",
+  "description": "Freezeframe is a library that automatically pauses animated .gifs and enables them to start animation on mouse hover or click",
+  "main": "/dist/freezeframe.min.js",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "@thrivehive/eslint-config-node": "^1.2.3",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "chalk": "^2.4.2",
+    "clean-webpack-plugin": "^2.0.2",
+    "common-tags": "^1.8.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "coveralls": "^3.0.4",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.17.3",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "imagesloaded": "^4.1.4",
+    "jest": "^24.8.0",
+    "jest-transform-stub": "^2.0.0",
+    "lerna": "^3.14.1",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.6.0",
+    "sass-loader": "^7.1.0",
+    "terser-webpack-plugin": "^1.3.0",
+    "webpack": "^4.34.0",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-dev-server": "^3.7.1",
+    "write-file-webpack-plugin": "^4.5.0"
+  },
+  "scripts": {
+    "build": "node utils/build.js && ./demo.sh",
+    "start": "node utils/dev.js",
+    "lint": "eslint ./src",
+    "test": "jest",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ctrl-Freaks/freezeframe.js.git"
+  },
+  "author": "ctrl-freaks (Chris Antonellis, Nick Ford)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ctrl-Freaks/freezeframe.js/issues"
+  },
+  "homepage": "https://github.com/Ctrl-Freaks/freezeframe.js#readme",
+  "keywords": [
+    "freezeframe",
+    "gif"
+  ]
+}
